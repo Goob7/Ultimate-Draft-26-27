@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA 26-27 Season 4-3-3 Draft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Ultimate Draft 26-27</h1>
+    <p id="round-info">Pick a player for your squad!</p>
+
+    <!-- Draft Selection Section -->
+    <div id="draft-container">
+        <h3 id="choice-title">Choose 1 Player</h3>
+        <div id="players"></div>
+        <button id="next-btn" style="display: none;">Confirm Pick</button>
+        <button id="restart-btn" style="display: none;">Restart Draft</button>
+    </div>
+
+    <!-- 4-3-3 Football Pitch -->
+    <div id="pitch">
+        <!-- Attack -->
+        <div class="pitch-slot" id="slot-LW" style="top: 20%; left: 20%;">LW</div>
+        <div class="pitch-slot" id="slot-ST" style="top: 15%; left: 50%;">ST</div>
+        <div class="pitch-slot" id="slot-RW" style="top: 20%; left: 80%;">RW</div>
+
+        <!-- Midfield -->
+        <div class="pitch-slot" id="slot-LCM" style="top: 45%; left: 25%;">CM</div>
+        <div class="pitch-slot" id="slot-CDM" style="top: 50%; left: 50%;">CDM</div>
+        <div class="pitch-slot" id="slot-RCM" style="top: 45%; left: 75%;">CM</div>
+
+        <!-- Defense -->
+        <div class="pitch-slot" id="slot-LB" style="top: 75%; left: 15%;">LB</div>
+        <div class="pitch-slot" id="slot-CB1" style="top: 78%; left: 38%;">CB</div>
+        <div class="pitch-slot" id="slot-CB2" style="top: 78%; left: 62%;">CB</div>
+        <div class="pitch-slot" id="slot-RB" style="top: 75%; left: 85%;">RB</div>
+
+        <!-- Goalkeeper -->
+        <div class="pitch-slot" id="slot-GK" style="top: 90%; left: 50%;">GK</div>
+    </div>
+<p>
+  <h1>⚽ FIFA 2026-27 Draft</h1>
+    <p id="round-info">Pick a player for your squad!</p>
+    <!-- ADD THIS LINE FOR THE AVERAGE RATING DISPLAY -->
+    <h3 id="team-rating">Team Rating: ⭐ 0 OVR</h3>
+    <script src="script.js"></script>
+</body>
+</html>
