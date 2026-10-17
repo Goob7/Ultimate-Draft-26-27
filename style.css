@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+/* Draft Choices Container */
+#draft-container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+#players {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Base Player Card Style */
+.player-card {
+    width: 130px;
+    height: 180px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, border 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+    color: white !important;
+}
+
+.player-card:hover {
+    transform: scale(1.08);
+}
+
+.player-card.selected {
+    border: 4px solid #00ffcc !important;
+    transform: scale(1.08);
+}
+
+/* --- TIER STYLES (Used by both Choice Cards and Pitch Slots) --- */
+.tier-90 {
+    background: linear-gradient(135deg, #ffe066, #f5af19, #e65c00) !important;
+    border: 2px solid #fff099 !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6) !important;
+    color: white !important;
+}
+
+.tier-85 {
+    background: linear-gradient(135deg, #d4af37, #aa7c11) !important;
+    border: 2px solid #f3e5ab !important;
+    color: white !important;
+}
+
+.tier-silver {
+    background: linear-gradient(135deg, #bdc3c7, #2c3e50) !important;
+    border: 2px solid #e0e0e0 !important;
+    color: white !important;
+}
+
+/* Pitch Layout */
+#pitch {
+    position: relative;
+    width: 700px;
+    height: 550px;
+    background: #2e7d32;
+    border: 4px solid white;
+    border-radius: 15px;
+    margin: 30px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+#pitch::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Empty Slots on Pitch */
+.pitch-slot {
+    position: absolute;
+    width: 90px;
+    height: 110px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #ddd;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+/* Filled Slots on Pitch - removes dashed border */
+.pitch-slot.filled {
+    border-style: solid !important;
+    font-weight: bold;
+}
+
+/* Action Buttons */
+#next-btn, #restart-btn {
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #00b388;
+    color: white;
+}
